@@ -1,0 +1,542 @@
+skip to content
+features
+→
+mobile
+→
+actions
+→
+codespaces
+→
+packages
+→
+security
+→
+code review
+→
+project management
+→
+integrations
+→
+github sponsors
+→
+customer stories
+→
+security
+→
+team
+enterprise
+explore github
+→
+learn & contribute
+topics
+→
+collections
+→
+trending
+→
+learning lab
+→
+open source guides
+→
+connect with others
+the readme project
+→
+events
+→
+community forum
+→
+github education
+→
+github stars program
+→
+marketplace
+plans
+→
+compare plans
+→
+contact sales
+→
+nonprofit
+→
+education
+→
+↵
+↵
+no suggested jump to results
+↵
+↵
+↵
+↵
+↵
+↵
+{{ message }}
+kubernetes
+/
+community
+
+code
+issues
+115
+pull requests
+29
+actions
+projects
+0
+security
+insights
+
+more
+
+
+
+
+
+
+
+
+
+have a question about this project?
+sign up for a free github account to open an issue and contact its maintainers and the community.
+
+pick a username
+email address
+password
+sign up for github
+by clicking “sign up for github”,you agree to our
+terms of service
+and
+privacy statement
+. we’ll occasionally send you account related emails.
+sign in
+jump to bottom
+#2759
+open
+nikhita
+opened this issue
+oct 6,2018
+open
+update e2e testing guide
+#2759
+nikhita
+opened this issue
+oct 6,2018
+assignees
+
+
+labels
+area/contributor-guide
+area/developer-guide
+help wanted
+kind/bug
+kind/documentation
+lifecycle/frozen
+priority/important-longterm
+sig/contributor-experience
+sig/testing
+projects
+contribex: contributor-documentation ...
+
+sig-testing
+
+comments
+nikhita
+oct 6,2018
+•
+the doc
+https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests.md
+is very stale and lots of portions need a re-write.
+ref:
+#2701 (comment)
+/cc
+@bentheelder
+
+@spiffxp
+
+@cjwagner
+/sig testing
+👍
+k8s-ci-robot
+sig/testing
+area/contributor-guide
+kind/bug
+oct 6,2018
+nikhita
+oct 6,2018
+#2701
+
+merged
+nikhita
+oct 15,2018
+#2793
+
+closed
+krzyzacy
+oct 15,2018
+/milestone 2019
+also
+contributors/devel/e2e-node-tests.md
+here
+👍
+nikhita
+nov 14,2018
+#2931
+
+closed
+nikhita
+dec 18,2018
+#1537
+
+closed
+guineveresaenger
+jan 7,2019
+#3064
+
+closed
+56 of 56 tasks complete
+fejta-bot
+jan 13,2019
+issues go stale after 90d of inactivity.
+/remove-lifecycle stale
+.
+if this issue is safe to close now please do so with
+/close
+.
+send feedback to sig-testing,kubernetes/test-infra and/or
+fejta
+.
+k8s-ci-robot
+lifecycle/stale
+jan 13,2019
+nikhita
+jan 13,2019
+/remove-lifecycle stale
+…
+on mon 14 jan,2019,12:28 am fejta-bot,***@***.***> wrote:
+ issues go stale after 90d of inactivity.
+ mark the issue as fresh with /remove-lifecycle stale.
+ stale issues rot after an additional 30d of inactivity and eventually
+ close.
+
+ if this issue is safe to close now please do so with /close.
+
+ send feedback to sig-testing,kubernetes/test-infra and/or fejta
+ <
+https://github.com/fejta
+>.
+ /lifecycle stale
+
+ —
+ you are receiving this because you authored the thread.
+ reply to this email directly,view it on github
+ <
+#2759 (comment)
+>,or mute the thread
+ <
+https://github.com/notifications/unsubscribe-auth/apxa0ovhu8ammfcxmlvqg0d1b7t9exw2ks5vc4hsgajpzm4xld3x
+>
+ .
+k8s-ci-robot
+lifecycle/stale
+jan 13,2019
+parispittman
+to do
+contribex: contributor-documentation subproject
+automation
+mar 6,2019
+nikhita
+mar 18,2019
+/kind documentation
+k8s-ci-robot
+kind/documentation
+mar 18,2019
+parispittman
+area/developer-guide
+aug 28,2019
+parispittman
+markyjackson-taulia
+aug 28,2019
+parispittman
+to do
+in progress
+contribex: contributor-documentation subproject
+aug 28,2019
+fejta-bot
+nov 26,2019
+issues go stale after 90d of inactivity.
+/remove-lifecycle stale
+.
+if this issue is safe to close now please do so with
+/close
+.
+send feedback to sig-testing,kubernetes/test-infra and/or
+fejta
+.
+k8s-ci-robot
+lifecycle/stale
+nov 26,2019
+vishakhanihore
+dec 18,2019
+•
+/assign
+k8s-ci-robot
+vishakhanihore
+dec 18,2019
+vishakhanihore
+dec 18,2019
+/remove-lifecycle stale
+k8s-ci-robot
+lifecycle/stale
+dec 18,2019
+vishakhanihore
+dec 24,2019
+kubernetes/org#1503
+
+closed
+6 of 6 tasks complete
+markyjackson-taulia
+jan 4,2020
+/unassign
+@markyjackson-taulia
+now that
+@vishakhanihore
+is working on this
+markyjackson-taulia
+jan 4,2020
+alex-leonhardt
+jan 26,2020
+i was trying to follow the instructions to install
+kubetest
+but it failed,being unable to find some of its dependencies :
+➜ go get -u k8s.io/test-infra/kubetest
+package github.com/aws/aws-k8s-tester/ekstester: cannot find package "github.com/aws/aws-k8s-tester/ekstester" in any of:
+	/usr/local/go/src/github.com/aws/aws-k8s-tester/ekstester (from $goroot)
+	/users/ale/code/go/src/github.com/aws/aws-k8s-tester/ekstester (from $gopath)
+package k8s.io/client-go/vendor/github.com/golang/protobuf/proto: cannot find package "k8s.io/client-go/vendor/github.com/golang/protobuf/proto" in any of:
+	/usr/local/go/src/k8s.io/client-go/vendor/github.com/golang/protobuf/proto (from $goroot)
+	/users/ale/code/go/src/k8s.io/client-go/vendor/github.com/golang/protobuf/proto (from $gopath)
+package k8s.io/client-go/vendor/github.com/googleapis/gnostic/openapiv2: cannot find package "k8s.io/client-go/vendor/github.com/googleapis/gnostic/openapiv2" in any of:
+	/usr/local/go/src/k8s.io/client-go/vendor/github.com/googleapis/gnostic/openapiv2 (from $goroot)
+	/users/ale/code/go/src/k8s.io/client-go/vendor/github.com/googleapis/gnostic/openapiv2 (from $gopath)
+package k8s.io/client-go/vendor/github.com/davecgh/go-spew/spew: cannot find package "k8s.io/client-go/vendor/github.com/davecgh/go-spew/spew" in any of:
+	/usr/local/go/src/k8s.io/client-go/vendor/github.com/davecgh/go-spew/spew (from $goroot)
+	/users/ale/code/go/src/k8s.io/client-go/vendor/github.com/davecgh/go-spew/spew (from $gopath)
+package k8s.io/client-go/vendor/golang.org/x/crypto/ssh/terminal: cannot find package "k8s.io/client-go/vendor/golang.org/x/crypto/ssh/terminal" in any of:
+	/usr/local/go/src/k8s.io/client-go/vendor/golang.org/x/crypto/ssh/terminal (from $goroot)
+	/users/ale/code/go/src/k8s.io/client-go/vendor/golang.org/x/crypto/ssh/terminal (from $gopath)
+package k8s.io/client-go/vendor/golang.org/x/oauth2: cannot find package "k8s.io/client-go/vendor/golang.org/x/oauth2" in any of:
+	/usr/local/go/src/k8s.io/client-go/vendor/golang.org/x/oauth2 (from $goroot)
+	/users/ale/code/go/src/k8s.io/client-go/vendor/golang.org/x/oauth2 (from $gopath)
+package k8s.io/client-go/vendor/golang.org/x/time/rate: cannot find package "k8s.io/client-go/vendor/golang.org/x/time/rate" in any of:
+	/usr/local/go/src/k8s.io/client-go/vendor/golang.org/x/time/rate (from $goroot)
+	/users/ale/code/go/src/k8s.io/client-go/vendor/golang.org/x/time/rate (from $gopath)
+package k8s.io/client-go/vendor/github.com/imdario/mergo: cannot find package "k8s.io/client-go/vendor/github.com/imdario/mergo" in any of:
+	/usr/local/go/src/k8s.io/client-go/vendor/github.com/imdario/mergo (from $goroot)
+	/users/ale/code/go/src/k8s.io/client-go/vendor/github.com/imdario/mergo (from $gopath)
+casibbald
+jan 28,2020
+•
+it looks like there are broken dependencies:
+$ go get -u k8s.io/test-infra/kubetest
+taking a look at the aws-k8s-tester repo,there is no file or directory called ekstester
+any advice?
+go: extracting github.com/mattn/go-ieproxy v0.0.0-20200121124216-6d733ce01d10
+casibbald
+jan 30,2020
+@vishakhanihore
+vishakhanihore please may you kindly advise if this is something you have started looking at?
+mrbobbytables
+in progress
+backlog
+contribex: contributor-documentation subproject
+feb 9,2020
+mrbobbytables
+next
+milestone
+mar 10,2020
+mrbobbytables
+sig/contributor-experience
+mar 11,2020
+mrbobbytables
+apr 22,2020
+/assign
+@hh
+k8s-ci-robot
+hh
+apr 22,2020
+mrbobbytables
+backlog
+planned
+contribex: contributor-documentation subproject
+apr 22,2020
+spiffxp
+help wanted
+may 21,2020
+elmiko
+jun 5,2020
+#4836
+
+merged
+elmiko
+jun 5,2020
+hello/
+i ran into the issues with the installation instructions today and created a pr to fix that part. not sure what else is stale,but this should help.
+fejta-bot
+sep 3,2020
+issues go stale after 90d of inactivity.
+/remove-lifecycle stale
+.
+if this issue is safe to close now please do so with
+/close
+.
+send feedback to sig-testing,kubernetes/test-infra and/or
+fejta
+.
+k8s-ci-robot
+lifecycle/stale
+sep 3,2020
+mrbobbytables
+sep 3,2020
+/remove-lifecycle stale
+i believe this is being worked on
+👍
+k8s-ci-robot
+lifecycle/stale
+sep 3,2020
+mrbobbytables
+oct 7,2020
+@bentheelder
+
+@spiffxp
+
+@stevekuznetsov
+spiffxp
+oct 13,2020
+they are not up to date enough imo,i would happily review any changes to them.  my bandwidth for updating them myself is low
+spiffxp
+oct 13,2020
+at a glance,a few things i would recommend:
+drop references to ci-test.k8s.io and pr-test.k8s.io,instead refer to:
+prow.k8s.io
+testgrid.k8s.io
+prow.k8s.io/an/example/spyglass/path/for/a/specific/ci-job
+prow.k8s.io/an/example/spyglass/path/for/a/specific/pr-job
+instructions on how to get kubetest (iirc it can't be installed via go get)
+rewrite kinds of tests to instead be test tags,include test tags that aren't yet documented ([disabledforlargeclusters] is one i'm aware of off the top of my head)
+i might recommend using kind to run e2e tests (and examples to do so),that may already exist elsewhere
+@bentheelder
+?
+the "performance evaluation" content may be stale,i feel like that should move to or reference scalability docs with a link
+mrbobbytables
+oct 16,2020
+#5239
+
+open
+riaankl
+oct 22,2020
+@pymander
+is doing great work on
+https://github.com/kubernetes/community/blob/master/contributors/devel/sig-testing/e2e-tests-kubetest2.md
+@spiffxp
+mentioned above to add to the document.
+👍
+fejta-bot
+jan 20,2021
+issues go stale after 90d of inactivity.
+/remove-lifecycle stale
+.
+if this issue is safe to close now please do so with
+/close
+.
+send feedback to sig-testing,kubernetes/test-infra and/or
+fejta
+.
+k8s-ci-robot
+lifecycle/stale
+jan 20,2021
+spiffxp
+feb 9,2021
+/remove-lifecycle stale
+k8s-ci-robot
+priority/important-longterm
+lifecycle/frozen
+lifecycle/stale
+feb 9,2021
+spiffxp
+next
+milestone
+feb 9,2021
+spiffxp
+to triage
+sig-testing
+automation
+feb 9,2021
+spiffxp
+to triage
+help wanted
+sig-testing
+feb 9,2021
+sign up for free
+to join this conversation on github
+.
+    already have an account?
+sign in to comment
+
+hh
+
+vishakhanihore
+area/contributor-guide
+area/developer-guide
+help wanted
+kind/bug
+kind/documentation
+lifecycle/frozen
+priority/important-longterm
+sig/contributor-experience
+sig/testing
+contribex: contributor-documentation ...
+
+
+
+sig-testing
+
+
+
+successfully merging a pull request may close this issue.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+© 2021 github,inc.
+terms
+privacy
+security
+status
+docs
+contact github
+pricing
+api
+training
+blog
+about
+you signed in with another tab or window.
+reload
+to refresh your session.
+you signed out in another tab or window.
+reload
+to refresh your session.,sign up for github
+👍
+            3
+👍
+            1
+👍
+            1,
