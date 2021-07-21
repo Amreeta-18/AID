@@ -3,10 +3,11 @@ from parseDOM import parseDOM
 from CheckRules import CheckRules
 from gensim.summarization import keywords
 import re
+import openpyxl
 from openpyxl import load_workbook
 import spacy
 from collections import Counter
-import xlrd
+#import xlrd
 
 # This file runs each of the rules for each URL in the input/output file
 
@@ -26,7 +27,7 @@ res = 0
 # List of DOM words to exclude from keywords
 DOM_words = ['window', 'document', 'header', 'form', 'link', 'field', 'tab', 'button', 'checkbox', 'icon', 'data', 'information']
 
-for row in range(1, 5): #The number of rows in the input file to run AID on
+for row in range(2, 3): #The number of rows in the input file to run AID on
     keywords_S = []
     keywords_A = []
     all_keywords = []
@@ -34,7 +35,7 @@ for row in range(1, 5): #The number of rows in the input file to run AID on
     print(row)
     print(url)
 
-    workbook = load_workbook(filename)
+    workbook = openpyxl.load_workbook(filename)
     sheet = workbook.active
 
 # Getting Keywords from subgoal and action by extracting nouns
