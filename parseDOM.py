@@ -1,4 +1,7 @@
-import urllib.request, base64, urllib.error
+# import urllib3
+# import urllib3.request
+#import urllib.request, base64, urllib.error
+# from urllib3.request import urlopen
 import requests
 from bs4 import BeautifulSoup
 from bs4.element import Comment
@@ -22,24 +25,38 @@ class parseDOM():
 	def get_html(self, url):
 	# url = 'https://github.com/kubernetes/kubernetes'
 		# url = str(url)
-		user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
-		headers={'User-Agent':user_agent,}
-		request=urllib.request.Request(url,None,headers)
-		response = urllib.request.urlopen(request)
-		data = response.read()
+		# user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+		# headers={'User-Agent':user_agent,}
+		#request=urllib.request.Request(url,None,headers)
+		# response = requests.get(url, headers=headers, verify=False)
+		# response = urllib3.request.urlopen(url)
+		r = requests.get(url)
+		data = r.text
 
-		f = open('current_html.html', 'wb')
+		f = open('current_html.html', 'w')
 		f.write(data)
 		f.close
 
 	def get_text_from_url(self, url):
-		self.get_html(url)
-		soup = BeautifulSoup(open("htmlcode.txt"), 'html.parser')
+		user_agent = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.9.0.7) Gecko/2009021910 Firefox/3.0.7'
+		headers={'User-Agent':user_agent,}
+		response = requests.get(url, headers=headers, verify=False)
+		# self.get_html(url)
+		soup = BeautifulSoup(response.text, "lxml")
+		for script in soup(["script", "style"]):
+			script.extract()
+		text = soup.get_text()
+		lines = (line.strip() for line in text.splitlines())
+		chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+		text = '\n'.join(chunk for chunk in chunks if chunk)
+
+
         #print(soup.get_text())
 		f=open('Alltext.txt','w')
-		All_Text_On_Page = soup.get_text()
-		All_Text_On_Page = All_Text_On_Page.lower()
-		f.write(All_Text_On_Page)
+		# All_Text_On_Page = soup.get_text()
+		# All_Text_On_Page = All_Text_On_Page.lower()
+		# f.write(All_Text_On_Page)
+		f.write(text)
 		f.close()
 
 
