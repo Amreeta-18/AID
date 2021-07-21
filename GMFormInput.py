@@ -1,4 +1,4 @@
-import xlrd
+import openpyxl
 
 class GMFormInput():
 	"""
@@ -10,38 +10,44 @@ class GMFormInput():
 	def GMFormInput(self, row, filename):
 		loc = filename		
 		
-		wb = xlrd.open_workbook(loc)		#open excel sheet
-		sheet = wb.sheet_by_index(0)		
+		wb = openpyxl.load_workbook(loc)		#open excel sheet
+		sheet = wb.active
+		#sheet = wb.sheet_by_index(0)		
 		# pathname = sheet.cell_value(row,4)     	#Takes each cell from the sheet
-		scenario = sheet.cell_value(row,1)
-		subgoal = sheet.cell_value(row,2)
-		action = sheet.cell_value(row,3)
-		url = sheet.cell_value(row, 4)   
+		scenario = sheet.cell(row,2).value
+		subgoal = sheet.cell(row,3).value
+		action = sheet.cell(row,4).value
+		url = sheet.cell(row, 5).value   
+
+		# scenario = sheet.cell_value(row,2)
+		# subgoal = sheet.cell_value(row,3)
+		# action = sheet.cell_value(row,4)
+		# url = sheet.cell_value(row, 5)   
 		return scenario.lower(), subgoal.lower(), action.lower(), url
 
 	# Fetch "before" action for the current URL
 	def before_action(self, row, filename):
 		loc = filename		
 		
-		wb = xlrd.open_workbook(loc)		#open excel sheet
-		sheet = wb.sheet_by_index(0)		
-		action = sheet.cell_value(row,3)   
+		wb = openpyxl.load_workbook(loc)		#open excel sheet
+		sheet = wb.active				
+		action = sheet.cell(row,4).value   
 		return action.lower()
 
 	# Fetch "after" action for the current URL
 	def before_pathname(self, row):
 		loc = ('ID_input.xlsx')			
 		
-		wb = xlrd.open_workbook(loc)		#open excel sheet
-		sheet = wb.sheet_by_index(0)		
-		action = sheet.cell_value(row,4)   
+		wb = openpyxl.load_workbook(loc)	#open excel sheet
+		sheet = wb.active		
+		action = sheet.cell(row,4).value   
 		return action.lower()
 
 	# Fetch keywords for the "before" action for the current URL
 	def before_action_keywords(self, row):
 		loc = ('ID_input.xlsx')			
 		
-		wb = xlrd.open_workbook(loc)		#open excel sheet
-		sheet = wb.sheet_by_index(0)		
-		keywords = sheet.cell_value(row,6)   
+		wb = openpyxl.load_workbook(loc)		#open excel sheet
+		sheet = wb.active			
+		keywords = sheet.cell(row,6).value   
 		return keywords
