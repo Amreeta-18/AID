@@ -43,5 +43,5 @@ This project uses Python v3.7.4.
 ##### Required for github API usage 
 * caiusb/miner-utils: `pip install 'git+https://github.com/caiusb/miner-utils'`
 * gitpython: `pip install gitpython`
-* pandas: `pip install pandas` 
+* pandas: `pip install pandas`  
 
