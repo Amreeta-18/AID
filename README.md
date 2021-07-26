@@ -26,7 +26,7 @@ To run AID on your own website, add an excel sheet with input similar to Example
 
 ### Dependencies
 This project uses Python v3.7.4.
-* beautifulsoup: `pip isntall bs4`
+* beautifulsoup: `pip install bs4`
 * gensim: `pip install gensim`
 * spacy: see https://realpython.com/natural-language-processing-spacy-python/#installation. In case that link is broken, follow these instructions:
     - `pip install spacy`
@@ -35,7 +35,6 @@ This project uses Python v3.7.4.
         - `python3` to get into a Python environment in your terminal
         - `import spacy`
         - `nlp = spacy.load('en_core_web_sm')`. If the nlp object is created, then it means that spaCy was installed and that models and data were successfully downloaded.
-* xlrd: `pip install xlrd`
 * openpyxl: `pip install openpyxl`
 * nltk: `pip install nltk`
 
