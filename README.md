@@ -44,7 +44,7 @@ This project uses Python v3.7.4.
 * pandas: `pip install pandas`
 * gensim: `pip install gensim==3.8.3`
 
-If pip install is not working, try using `python -m pip install [LibraryName]`
+If pip install is not working, try using `python -m pip install [LibraryName]`\  
 Or try using `py -m pip install [LibraryName]`
 
 #### Rule 4+5 dependencies 
