@@ -6,9 +6,9 @@ This tool aims to automate GenderMag for the Information Processing facet, based
 ### Getting started
 
 1. Download this repository so that you have it on your local machine.
-2. In the CheckRules.py file, add your github username and a personal access token.
+2. In the CheckRules.py file, add your github username(Line 23) and a personal access token(Line 24).
     * Click here for instructions on [Creating a personal access token.](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
-    * Scope that needs to be ticked is 'repo'
+    * Scope that needs to be ticked is 'repo'.
 4. On the command line, run the MainTool.py as `python MainTool.py`
     This should generate a text file 'report.txt' with all the violations. 
 
@@ -44,7 +44,8 @@ This project uses Python v3.7.4.
 * pandas: `pip install pandas`
 * gensim: `pip install gensim==3.8.3`
 
-If pip install is not working, try using `python -m pip install [LibraryName]'  
+If pip install is not working, try using `python -m pip install [LibraryName]'
+
 Or try using `py -m pip install [LibraryName]`
 
 #### Rule 4+5 dependencies 
