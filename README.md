@@ -3,6 +3,13 @@ An automated detector for gender-inclusivity bugs in OSS project pages
 
 This tool aims to automate GenderMag for the Information Processing facet, based on [GenderMag](https://www.gendermag.org). You can find the preprint of our paper at https://ir.library.oregonstate.edu/concern/defaults/ws859n93g. 
 
+# Core Contributors
+[Amreeta Chatterjee](https://github.com/Amreeta-18), 
+[Mariam Guizani](https://github.com/mariamgui), 
+[Catherine Stevens](https://github.com/csrs)
+
+Project migrated from the development version of the project [Original project](https://github.com/Amreeta-18/GMTool)
+
 ### Getting started
 
 1. Download this repository so that you have it on your local machine.
