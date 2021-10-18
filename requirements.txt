@@ -1,0 +1,9 @@
+openpyxl
+requests
+bs4
+spacy
+nltk
+minerutils
+pandas
+gensim==3.8.3
+gitpython
