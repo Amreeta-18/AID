@@ -153,7 +153,7 @@ class parseDOM():
 	def link_labels(self, pathname):
 		remove_element = "None"
 		#self.get_html(url)
-		f = open(pathname, encoding="utf8")     
+		f = open(pathname, encoding="utf8", errors='ignore')     
 		soup = BeautifulSoup(f, 'html.parser')
 		open("Alllinklabels.txt", "w").close()
 		table = soup.findAll('div',{'class':'f4'})

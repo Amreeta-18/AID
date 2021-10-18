@@ -13,7 +13,8 @@ Project migrated from the development version of the project [Original project](
 ### Getting started
 
 1. Download this repository so that you have it on your local machine.
-2. In the CheckRules.py file, add your github username and a personal access token.
+2. Install python in local machine and setup pip. Click here for instructions on [Installing Packages in Python](https://packaging.python.org/tutorials/installing-packages/)
+3. In the CheckRules.py file, add your github username and a personal access token.
     * Click here for instructions on [Creating a personal access token.](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token)
     * Scope that needs to be ticked is 'repo'
 4. On the command line, run the MainTool.py as `python MainTool.py`
@@ -39,6 +40,10 @@ This project uses Python v3.7.4.
 * openpyxl: `pip install openpyxl`
 * requests: `pip install requests`
 * beautifulsoup: `pip install bs4`
+* nltk: `pip install nltk`
+* minerutils: `pip install minerutils`
+* pandas: `pip install pandas`
+* gensim: `pip install gensim==3.8.3`
 * spacy: see https://realpython.com/natural-language-processing-spacy-python/#installation. In case that link is broken, follow these instructions:
     - `pip install spacy`
     - `python -m spacy download en_core_web_sm`
@@ -46,17 +51,20 @@ This project uses Python v3.7.4.
         - `python3` to get into a Python environment in your terminal
         - `import spacy`
         - `nlp = spacy.load('en_core_web_sm')`. If the nlp object is created, then it means that spacy was installed and that models and data were successfully downloaded.
-* nltk: `pip install nltk`
-* minerutils: `pip install minerutils`
-* pandas: `pip install pandas`
-* gensim: `pip install gensim==3.8.3`
 
 If pip install is not working, try using `python -m pip install [LibraryName]`
 Or try using `py -m pip install [LibraryName]`
 
 #### Rule 4+5 dependencies 
 ##### Required for github API usage 
-* caiusb/miner-utils: `pip install 'git+https://github.com/caiusb/miner-utils'`
+* caiusb/miner-utils: `pip install "git+https://github.com/caiusb/miner-utils"`
 * gitpython: `pip install gitpython`
 * pandas: `pip install pandas`  
+
+### Install all dependencies in one go by executing the commands listed below in chronological order:
+`pip install -r requirements.txt`
+
+`python -m spacy download en_core_web_sm`
+
+`pip install "git+https://github.com/caiusb/miner-utils"`
 
