@@ -37,7 +37,7 @@ class CheckRules():
     # Check if the URL is an issue page
     def is_issue_page(self, pathname):
         is_issue_page=0
-        html = open(pathname, encoding="utf8")
+        html = open(pathname, encoding="utf8", errors='ignore')
         soup = BeautifulSoup(html, "html.parser")
         a = soup.find("div", attrs={'aria-label':'Issues'})
         if (a!=None):
